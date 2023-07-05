@@ -1,7 +1,13 @@
 class AppConstant {
   AppConstant._();
 
-  static String appName =  "AgriLog";
-  static String homeViewProfileTitle =  "Profile";
-   static String homeViewWelcomeTitle =  "Welcome";
+  static const appName =  "AgriLog";
+  static const homeViewProfileTitle =  "Profile";
+  static const homeViewWelcomeTitle =  "Welcome";
+  static const homeViewTextButtonVendor =  "Vendors";
+  static const homeViewTextButtonHaulage =  "Haulage";
+  static const homeViewTextButtonRiders =  "Riders";
+  static const  homeViewTextButtonCustomers =  "Customers";
+  static const  homeViewTextButtonOrders =  "Orders";
+  static const  homeViewTextButtonStatistics =  "Statistics";
 }

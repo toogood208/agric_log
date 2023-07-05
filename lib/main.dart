@@ -1,9 +1,12 @@
+import 'package:agri_logistics/app/app.locator.dart';
+import 'package:agri_logistics/app/app.router.dart';
 import 'package:agri_logistics/ui/shared/app_constant.dart';
 import 'package:agri_logistics/ui/shared/custom_theme.dart';
-import 'package:agri_logistics/ui/views/home_view/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked_services/stacked_services.dart';
 
-void main() {
+void main() async {
+  await setupLocator();
   runApp(const MyApp());
 }
 
@@ -16,10 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppConstant.appName,
-      theme:CustomTheme.lightTheme,
+      theme: CustomTheme.lightTheme,
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
-      home:const HomeView(),
+      navigatorKey: StackedService.navigatorKey,
+      initialRoute: Routes.homeView,
+      onGenerateRoute: StackedRouter().onGenerateRoute,
     );
   }
 }
